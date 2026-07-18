@@ -4,6 +4,7 @@
   "description": "A4 CLUB - Importador automatico Google Drive -> Cloudflare R2 + PostgreSQL",
   "main": "src/server.js",
   "scripts": {
+    "postinstall": "npx prisma migrate deploy || true",
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
     "db:push": "prisma db push",
